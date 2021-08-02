@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Table using DOM</title>
+    <script>
+        function myFunction(){
+
+            var tbl=document.getElementById("mytable")
+            // alert(tbl)
+            var row=tbl.insertRow(); 
+            var cell1=row.insertCell();
+            var cell2=row.insertCell();
+            var cell3=row.insertCell();
+            var cell4=row.insertCell();
+            var cell5=row.insertCell();
+
+            // cell1.innerHTML="Lavish";
+            // cell2.innerHTML="lavishjain@gmail.com";
+            // cell3.innerHTML="Pune";
+            // cell4.innerHTML="Developer";
+             cell1.innerHTML=document.getElementById("pname").value;
+            cell2.innerHTML=document.getElementById("pemail").value;
+            cell3.innerHTML=document.getElementById("paddress").value;
+            cell4.innerHTML=document.getElementById("pdomain").value;
+            cell5.innerHTML=document.getElementById("pdob").value;
+
+
+           
+
+        }
+
+
+    </script>
+</head>
+<body>
+    <form onsubmit="myFunction(); return false;" required> 
+        <input type="text" id="pname" placeholder="Enter The Name:" required/><br/>
+        <input type="text" id="pemail" placeholder="Enter The Email:" required/><br/>
+        <input type="text" id="paddress" placeholder="Enter The Address:"required/><br/>
+        <input type="text" id="pdomain" placeholder="Enter The Domain:"required/><br/>
+        <input type="date" id="pdob" placeholder="Enter The Date of Birth:"required/><br/>
+
+        <input type="submit" value="Add to Cart"/ >
+
+    </form>
+    <h1>Person  Details</h1>
+    <h1></h1>
+    <table border=1 id="mytable">
+        
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Address</td>
+            <td>Domain</td>
+            <td>DOB</td>
+
+
+        </tr>
+
+    </table>
+</body>
+</html>
